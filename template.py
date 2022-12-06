@@ -1,16 +1,17 @@
+from typing import TextIO
 import click
 
-def part_one(input):
+def part_one(input: TextIO) -> None:
     raise NotImplementedError
 
-def part_two(input):
+def part_two(input: TextIO) -> None:
     raise NotImplementedError
 
 
 @click.command()
 @click.argument('input', type=click.File('r'))
 @click.argument('part', type=click.INT)
-def main(input, part):
+def main(input: TextIO, part: int) -> None:
     if part == 1:
         return part_one(input)
 
